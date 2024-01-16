@@ -157,7 +157,7 @@ NAME    OWNER   STATUS  PLATFORM        LATEST DEPLOY
 7.  `flyctl deploy` 로 배포하기(배포에 대한 에러는 하단의 트러블슈팅 참고)
 
 <details>
-<summary>Firebase 연동 순서</summary>
+<summary>Firebase 연동 순서</summary>****
    
 1. Firebase에서 프로젝트 생성
    
@@ -286,6 +286,9 @@ Your account has been marked as high risk. Please go to https://fly.io/high-risk
 Error: failed to fetch an image or build from source: app does not have a Dockerfile or buildpacks configured. See https://fly.io/docs/reference/configuration/#the-build-section
 ```
 해결방법 -
+
+- 빌드시 ERROR [internal] load build context 에러
+  Error: failed to fetch an image or build from source: error building: failed to solve: rpc error: code = Canceled desc = grpc: the client connection is closing 이 뜨며 에러가 나는 것은 인터넷 문제일 수 있다. 내일 학원 컴퓨터로 다시 빌드해 볼 것
 
 </details>
 
