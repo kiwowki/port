@@ -1,0 +1,224 @@
+#skills {
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 4vw;
+    display: block;
+    position: relative;
+    overflow: visible;
+}
+
+.skills_wrap {
+  width: 100%;
+  font-family: var(--sui);
+  font-weight: 500;
+  padding: 2.4vw 1.2vw;
+  margin-top: -5vw;
+  /* overflow: hidden; 얘 때문에 skills의 sticky가 안 먹힘*/
+}
+
+.personality_wrap {
+}
+
+.personality_top {
+  padding-left: 1.2vw;
+  padding-bottom: 1vw;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 1vw;
+}
+
+.personality_main {
+  font-size: 15vw;
+}
+
+.personality_main > div {
+  display: flex;
+  line-height: 0.8;
+  font-weight: 500;
+  letter-spacing: -0.5vw;
+}
+
+.personality_main > div > span {
+  font-size: 1vw;
+  letter-spacing: -0.1vw;
+  color: var(--black);
+  font-family: var(--pre);
+  padding-top: 1vw;
+}
+
+.personality_main .t1 {
+  color: #000;
+}
+
+.personality_main .t2 {
+  color: #2d2d2d;
+}
+
+.personality_main .t3 {
+  color: #4a4a4a;
+}
+
+.personality_main .t4 {
+  color: #757575;
+}
+
+.personality_main .t5 {
+  color: #959595;
+}
+
+.skillSet_wrap {
+}
+
+.skillSet_top {
+  padding-top: 20vw;
+  /* padding-top: 30vw; */
+  padding-bottom: 2vw;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 1vw;
+}
+
+.skillSet_main {
+  width: 100%;
+  /* align-items: flex-start; */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.skillSet_main .top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skillSet_main .middle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skillSet_main .bot {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skillSet_main .left {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skillSet_main .left .h3,
+.skillSet_main .left .h4,
+.skillSet_main .left .h3_bold {
+  position: sticky;
+  top: 40%;
+}
+
+.skillSet_main .mid {
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.skillSet_main .right {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.skillSet_main .right .h3,
+.skillSet_main .right .h4,
+.skillSet_main .right .h3_bold {
+  position: sticky;
+  top: 40%;
+}
+
+.skillSet_main .h3 {
+  color: #000;
+  letter-spacing: -0.3vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--sui);
+  font-size: 5vw;
+  font-weight: 400;
+  line-height: 4vw;
+}
+
+.skillSet_main .h4 {
+  color: #000;
+  letter-spacing: -0.2vw;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: var(--ilbo);
+  font-size: 5vw;
+  font-weight: 300;
+  line-height: 4vw;
+  text-decoration: none;
+}
+
+.skillSet_main .h3_bold {
+  color: #000;
+  letter-spacing: -0.3vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: var(--sui);
+  font-size: 5vw;
+  font-weight: 400;
+  line-height: 4vw;
+  font-weight: 500;
+}
+
+@media (max-width: 1000px) {
+  .personality_main > div > span {
+    font-size: 2vw;
+  }
+
+  .skillSet_wrap {
+    text-align: right;
+  }
+
+  .skillSet_top {
+    font-size: 2vw;
+    line-height: 2vw;
+  }
+
+  .skillSet_main {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .skillSet_main .left {
+    display: none;
+  }
+
+  .skillSet_main .mid {
+    align-items: flex-end;
+  }
+
+  .skillSet_main .mid > div {
+    letter-spacing: -0.4vw;
+    font-size: 8vw;
+    line-height: 6.5vw;
+  }
+
+  .skillSet_main .right {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  /* #skills {
+        margin-top: -200px;
+    } */
+}
+
+@media (max-width: 479px) {
+  .skills_wrap {
+    margin-top: 7vw;
+  }
+}

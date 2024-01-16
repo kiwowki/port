@@ -1,0 +1,29 @@
+:root {
+    --gmark: "GmarketSans";
+    --ilbo: "Chosunilbo_myungjo";
+    --pre: "Pretendard";
+    --sui: "SuisseIntl";
+    --roman: "Luxurious Roman";
+    --zeno: "PartizenoRegular";
+
+    --black: #000000;
+    --white: #ffffff;
+    --red: #f00;
+    --yellow: #FCD730;
+    
+
+    --black100: #2D2D2D;
+    --black200: #4A4A4A;
+    --black300: #757575;
+    --black400: #959595;
+    --black500: #d7d7d7;
+
+    font-size: 16px;
+    font-family: var(--pre);
+}
+
+@media (max-width: 800px){
+    :root {
+        font-size: 14px;
+    }
+}
