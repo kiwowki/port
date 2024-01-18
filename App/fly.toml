@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for react-portfolio-app on 2024-01-16T22:24:49+09:00
+# fly.toml app configuration file generated for react-portfolio-app on 2024-01-18T12:31:50+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = "react-portfolio-app"
-primary_region = "hkg"
+primary_region = "nrt"
 
 [build]
 

@@ -8,8 +8,8 @@ import { link } from './utils/link.js';
 
 const App = () => {
   useEffect(() => {
-    smooth();
     link();
+    smooth();
   })
   return (
     <BrowserRouter>

@@ -13,9 +13,10 @@ app.use(express.urlencoded({ extended: true }));
 // express router
 app.use("/api/reple", require("./server/router/reple.js"));
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
     mongoose
-        .connect(config.mongoURI)
+        // .connect(config.mongoURI)
+        .connect("mongodb+srv://wolves941110:rkdtjr00!!@cluster0.efj98qh.mongodb.net/?retryWrites=true&w=majority")
         .then(() => {
             console.log("listening  --> " + port);
             console.log("mongoose --> connecting");

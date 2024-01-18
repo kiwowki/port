@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
-import gsap from "gsap";
 
 import ContactImg from "../assets/img/profile-min.jpg";
 import RepleArea from "./reple/RepleArea";
@@ -52,7 +51,7 @@ const Contact = () => {
                     <div className="img_wrap">
                         <img src={ContactImg} alt="KangSeohyeon_photo" />
                     </div>
-                    <div className="reple_area">
+                    <div id="comment" className="reple_area">
                         <RepleArea />
                     </div>
                 </div>
@@ -80,13 +79,13 @@ const Contact = () => {
                 </div>
                 <div className="sns">
                     <span>
-                        <Link to="#">WORDPRESS</Link>MY WORKS 2023
+                        <Link to="https://kiwowki.github.io/">GIT BLOG</Link>ALGORITHM CODING TEST
                     </span>
                     <span>
-                        <Link to="#">NOTION</Link>WORKS DESCRIPTION
+                        <Link to="https://github.com/kiwowki/port">PORTFOLIO</Link>PORT CODE
                     </span>
                     <span>
-                        <Link to="#">GITHUB</Link>MARKDOWN, CODE
+                        <Link to="https://github.com/kiwowki">GITHUB</Link>CODE, MY WORKS 2023
                     </span>
                 </div>
             </div>

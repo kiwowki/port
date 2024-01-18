@@ -212,7 +212,6 @@ const About = () => {
           end: "+=800%",
           scrub: true,
           pin: true,
-          markers: true,
         },
       })
       .fromTo(

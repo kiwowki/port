@@ -13,6 +13,7 @@
     mix-blend-mode: difference;
     font-family: var(--pre);
     font-size: 0.7vw;
+    opacity: 0;
     .left {
         padding: 20px;
         > div {
@@ -29,6 +30,9 @@
         padding: 20px;
         text-align: right;
         display: inline-block;
+        .comment {
+            cursor: pointer;
+        }
     }
 }
 

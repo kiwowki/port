@@ -131,12 +131,10 @@ const Intro = () => {
             { overflow: "hidden" }
         );
         gsap.set(".intro_title .title .title_t1 p", {
-            opacity: 0,
             y: 100,
             z: -1000,
         });
         gsap.set(".intro_title .title .title_t2 p", {
-            opacity: 0,
             y: -100,
             z: -1000,
         });
@@ -164,7 +162,7 @@ const Intro = () => {
                 scale: 1,
                 stagger: 0.2,
             });
-            tl.to("#header", { duration: 1.2, y: 0 });
+            tl.to("#header", { duration: 1.2, y: 0, opacity:1 });
         }, 2000);
 
         const flipCard = (element) => {

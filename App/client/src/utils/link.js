@@ -1,9 +1,9 @@
 export function link() {
-    document.querySelectorAll("a[href^='#']").forEach((anchor) => {
+    document.querySelectorAll("Link[to^='#']").forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
 
-            const targetId = this.getAttribute("href");
+            const targetId = this.getAttribute("to");
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
