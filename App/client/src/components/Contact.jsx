@@ -6,6 +6,7 @@ import ContactImg from "../assets/img/profile-min.jpg";
 import RepleArea from "./reple/RepleArea";
 
 import { ContactTop } from "../constants/index";
+import { scrollToTop } from "../utils/smooth";
 
 const Contact = () => {
     // useEffect(() => {
@@ -69,7 +70,10 @@ const Contact = () => {
                     </h2>
                 </div> */}
                 <div className="bot">
-                    <Link to="#" id="goTop" className="top_button">
+                    {/* <Link to="#" id="goTop" className="top_button">
+                        GO TOP
+                    </Link> */}
+                    <Link href="#" onClick={(e) => { e.preventDefault(); scrollToTop(); }} id="goTop" className="top_button">
                         GO TOP
                     </Link>
                     <div className="text">SEND ME A MESSAGE:</div>

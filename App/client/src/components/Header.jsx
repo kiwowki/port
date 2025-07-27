@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header id="header" role="banner">
             <nav className="left" role="navigation">
-                <ScrollLink to="t3" smooth={true} duration={500} className="visual">
+                <ScrollLink to="t1" smooth={true} duration={500} className="visual">
                     visual
                 </ScrollLink>
             </nav>

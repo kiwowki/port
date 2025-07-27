@@ -14,24 +14,36 @@
     font-family: var(--pre);
     font-size: 0.7vw;
     opacity: 0;
+
     .left {
         padding: 20px;
-        > div {
+
+        // > div {
+        //     transition: all 0.3s;
+        a {
+            cursor: pointer;
             transition: all 0.3s;
-            a {
-                transition: all 0.3s;
-                &:hover {
-                    color: var(--yellow);
-                }
+
+            &:hover {
+                color: var(--yellow);
             }
         }
+
+        // }
     }
+
     .right {
         padding: 20px;
         text-align: right;
         display: inline-block;
+
         .comment {
             cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                color: var(--yellow);
+            }
         }
     }
 }
@@ -41,20 +53,24 @@
         font-size: 1vw;
     }
 }
+
 @media (max-width: 1000px) {
     #header {
         font-size: 1.4vw;
     }
 }
+
 @media (max-width: 700px) {
     #header {
         font-size: 1.6vw;
     }
 }
+
 @media (max-width: 479px) {
     #header {
         font-size: 3vw;
     }
+
     #header .left {
         display: none;
     }
@@ -62,7 +78,7 @@
     #header .right {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
     }
 
     #header .right a {

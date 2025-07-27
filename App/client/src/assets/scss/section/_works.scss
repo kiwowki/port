@@ -120,91 +120,111 @@
       }
     }
   }
+
+
+
+
+
+
+  @media (max-width: 1000px) {
+    // .works_start {
+    //   height: 80vh;
+    // }
+
+    .work {
+      height: 200vh;
+
+      .work_wrap {
+        height: 100vh;
+        // margin-top: -7vw;
+        overflow: auto;
+        // height: 70vh;
+
+
+        .top h2 {
+          font-weight: 600;
+        }
+
+        .desc {
+          font-size: 2vw;
+        }
+
+        .img {
+          z-index: 0;
+          border-radius: 0;
+        }
+
+        .img img {
+          border-radius: 3vw;
+        }
+
+        .works_nav a:first-child {
+          bottom: 75px;
+        }
+
+        .works_nav a:last-child {
+          bottom: 75px;
+        }
+      }
+
+
+    }
+
+  }
+
+
 }
 
-// @media (max-width: 1000px) {
-//   .works_start {
-//     height: 80vh;
-//   }
+@media (max-width: 650px) {
+  #works {
+    height: calc(320vh - 400px);
+  }
 
-//   .work,
-//   .work_wrap {
-//     height: 70vh;
-//     margin-top: -7vw;
-//   }
+  .works_start {
+    height: 60vh;
+  }
 
-//   .work .top h2 {
-//     font-weight: 600;
-//   }
-//   .work .desc {
-//     font-size: 2vw;
-//   }
+  .work,
+  .work_wrap {
+    // height: 60vh;
+  }
 
-//   .work .img {
-//     z-index: 0;
-//     border-radius: 0;
-//   }
+  .work .desc {
+    font-size: 2vw;
+  }
 
-//   .work .img img {
-//     border-radius: 3vw;
-//   }
-//   .work .works_nav a:first-child {
-//     bottom: 75px;
-//   }
-//   .work .works_nav a:last-child {
-//     bottom: 75px;
-//   }
-// }
+  .work .top span {
+    display: none;
+  }
+}
 
-// @media (max-width: 650px) {
-//   #works {
-//     height: calc(320vh - 400px);
-//   }
+@media (max-width: 479px) {
+  #works {
+    // height: 185vh;
 
-//   .works_start {
-//     height: 60vh;
-//   }
 
-//   .work,
-//   .work_wrap {
-//     height: 60vh;
-//   }
+    .work,
+    .work_wrap {
+      height: 100vh;
+    }
 
-//   .work .desc {
-//     font-size: 2vw;
-//   }
+    .work .desc {
+      text-align: center;
+      color: var(--black500);
+      font-size: 3vw;
+      padding: 5vw 35px;
+      word-break: keep-all;
+    }
 
-//   .work .top span {
-//     display: none;
-//   }
-// }
+    .work .works_nav a:first-child {
+      bottom: 35px;
+    }
 
-// @media (max-width: 479px) {
-//   #works {
-//     height: 185vh;
-//   }
+    .work .works_nav a:last-child {
+      bottom: 35px;
+    }
+  }
 
-//   .works_start {
-//     /* height: 40vh; */
-//   }
+}
 
-//   .work,
-//   .work_wrap {
-//     height: 40vh;
-//   }
-
-//   .work .desc {
-//     text-align: center;
-//     color: var(--black500);
-//     font-size: 3vw;
-//     padding: 5vw 35px;
-//     word-break: keep-all;
-//   }
-
-//   .work .works_nav a:first-child {
-//     bottom: 35px;
-//   }
-//   .work .works_nav a:last-child {
-//     bottom: 35px;
-//   }
-// }
+// 주석이었음

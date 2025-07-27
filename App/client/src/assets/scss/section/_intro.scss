@@ -1,4 +1,3 @@
-
 #intro {
     background-color: #000;
     color: #fff;
@@ -7,6 +6,7 @@
     left: 0;
     width: 100%;
     z-index: -1;
+
     .intro_title {
         display: flex;
         align-items: center;
@@ -15,9 +15,11 @@
         text-transform: uppercase;
         position: relative;
         margin: 0 1vw;
+
         .title {
             width: 100%;
             text-align: center;
+
             .title_t1 {
                 p {
                     font-size: 14vw;
@@ -31,28 +33,39 @@
                     opacity: 0;
                 }
             }
+
             .images_wrap {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+
                 .flip-container {
                     perspective: 1000px;
+
                     .flipper {
+                        position: relative;
                         transform-style: preserve-3d;
                         transition: transform 1s;
                         width: 6vw;
                         height: 8vw;
                         margin: 0.1vw;
                         border-radius: 10px;
-                        > div {
+
+                        &.flipped {
+                            transform: rotateY(180deg)
+                        }
+
+                        >div {
                             width: 100%;
                             height: 100%;
                             position: absolute;
                             backface-visibility: hidden;
                             cursor: pointer;
                         }
+
                         .front {
                             transform: rotateY(0deg);
+
                             img {
                                 width: 100%;
                                 height: 100%;
@@ -60,6 +73,7 @@
                                 border-radius: 1vw;
                             }
                         }
+
                         .back {
                             transform: rotateY(180deg);
                             display: flex;
@@ -68,14 +82,27 @@
                             background-color: var(--black);
                             border: 2px solid var(--white);
                             border-radius: 1vw;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: var(--yellow);
+                                border: 2px solid var(--yellow);
+                            }
+
                             p {
                                 margin: 0;
                                 font-size: 18px;
+                                transition: all 0.3s;
+
+                                &:hover {
+                                    color: var(--yellow);
+                                }
                             }
                         }
                     }
                 }
             }
+
             .title_t2 {
                 p {
                     font-size: 14vw;
@@ -94,9 +121,10 @@
 }
 
 @media (max-width: 1000px) {
-    .images_wrap > div:nth-last-child(-n + 5) {
+    .images_wrap>div:nth-last-child(-n + 5) {
         display: none;
     }
+
     #intro {
         .intro_title {
             .title {
@@ -104,17 +132,21 @@
                     .flip-container {
                         width: 9vw;
                         height: 12vw;
+
                         .flipper {
                             width: 9vw;
                             height: 12vw;
+
                             .front {
                                 width: 9vw;
                                 height: 12vw;
+
                                 img {
                                     width: 9vw;
                                     height: 12vw;
                                 }
                             }
+
                             .back {
                                 p {
                                     margin: 0;
@@ -124,6 +156,7 @@
                         }
                     }
                 }
+
                 .title_t2 {
                     p {
                         margin-top: 0.6vw;
@@ -138,8 +171,10 @@
     #intro {
         .intro_title {
             padding-top: 21vw;
+
             .title {
                 width: auto;
+
                 .title_t1 {
                     line-height: 1;
                 }
@@ -148,22 +183,27 @@
                     margin-bottom: 40vw;
                     line-height: 0.65;
                 }
+
                 .images_wrap {
                     .flip-container {
                         margin: 0 0.5vw;
                         width: 23vw;
                         height: 30vw;
+
                         .flipper {
                             width: 23vw;
                             height: 30vw;
+
                             .front {
                                 width: 23vw;
                                 height: 30vw;
+
                                 img {
                                     width: 23vw;
                                     height: 30vw;
                                 }
                             }
+
                             .back {
                                 p {
                                     font-size: 5vw;
@@ -176,7 +216,7 @@
         }
     }
 
-    .images_wrap > div:nth-last-child(-n + 11) {
+    .images_wrap>div:nth-last-child(-n + 11) {
         display: none;
     }
 }

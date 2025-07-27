@@ -3,68 +3,95 @@ import worksImage2 from "../assets/img/works1_2.jpg";
 import worksImage3 from "../assets/img/works1_3.jpg";
 import worksImage4 from "../assets/img/works1_4.jpg";
 
-export const introImg = [
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?abstract",
-    back: "시간",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?animal",
-    back: "끈기",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?visual",
-    back: "노력",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?story",
-    back: "믿음",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?space",
-    back: "정진",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?technology",
-    back: "확신",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?texture",
-    back: "체력",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?food",
-    back: "즐거움",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?interior",
-    back: "정리",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?abstract,art",
-    back: "경험",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?art",
-    back: "깨달음",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?red",
-    back: "열정",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?blue",
-    back: "신뢰",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?yellow",
-    back: "가능성",
-  },
-  {
-    src: "https://source.unsplash.com/random/150x207.63/?nature",
-    back: "실현",
-  },
+// export const introImg = [
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?abstract",
+//     back: "시간",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?animal",
+//     back: "끈기",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?visual",
+//     back: "노력",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?story",
+//     back: "믿음",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?space",
+//     back: "정진",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?technology",
+//     back: "확신",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?texture",
+//     back: "체력",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?food",
+//     back: "즐거움",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?interior",
+//     back: "정리",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?abstract,art",
+//     back: "경험",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?art",
+//     back: "깨달음",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?red",
+//     back: "열정",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?blue",
+//     back: "신뢰",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?yellow",
+//     back: "가능성",
+//   },
+//   {
+//     src: "https://source.unsplash.com/random/150x207.63/?nature",
+//     back: "실현",
+//   },
+// ];
+
+const totalImages = 50;
+const imageBasePath = "/intro/"; // public/intro 폴더 기준
+
+// intro01.jpg ~ intro50.jpg
+const imageFilenames = Array.from({ length: totalImages }, (_, i) =>
+  `${imageBasePath}intro${String(i + 1).padStart(2, "0")}.png`
+);
+
+// 고정 텍스트 (15개)
+const backTexts = [
+  "시간", "끈기", "노력", "믿음", "정진",
+  "확신", "체력", "즐거움", "정리", "경험",
+  "깨달음", "열정", "신뢰", "가능성", "실현"
 ];
+
+// 이미지 랜덤 선택 (비중복)
+function getShuffledImages(count) {
+  const shuffled = [...imageFilenames].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+// 최종 introImg 배열
+export const introImg = getShuffledImages(backTexts.length).map((src, idx) => ({
+  src,
+  back: backTexts[idx]
+}));
 
 export const aboutTop = ["hey,", "Creative", "Developer"];
 

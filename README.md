@@ -1,4 +1,4 @@
-# react를 이용한 포트폴리오 사이트 만들기
+# MERN(MongoDB + Express + React + Node.js)를 이용한 포트폴리오 사이트 만들기
 
 \*\* 임시로 쓰고 삭제할 것
 \_id: mongoose.Schema.Types.ObjectId
@@ -296,7 +296,7 @@ Error: failed to fetch an image or build from source: app does not have a Docker
 <summary>클론시 504 Gateway Timeout이 뜨는 에러</summary>
 504 Gateway Timeout 에러는 클라이언트가 요청을 보내고 있는 서버가 프록시 서버나 게이트웨이로부터 응답을 기다리는 동안에 시간 제한(timeout)이 초과되었을 때 발생합니다. 이는 서버가 요청을 처리하는 데에 너무 많은 시간이 걸려서 발생할 수 있습니다.
 
-해결방법 - client와 server에서 npm install을 하고 껐다 켜니 해결.
+해결방법 - client와 server에서 npm install을 하고 껐다 켜서 해결.
 </details>
 
 <details>
@@ -327,4 +327,13 @@ Git이 이 둘 중 어느 쪽으로 선택할지 혼란이 온 것이다.
 ⠀
 `git config core.autocrlf true` // 해당 프로젝트에만 적용
 
+</details>
+
+<details>
+<summary>새로고침 시 path="/"로 이동하지 않는 문제 </summary>
+스크롤 라이브러리인 lenis를 사용한 포트폴리오이기 때문에 재로드 시 자동으로 맨 위로 이동하지 않음.
+
+해결방법
+
+lenis.scrollTo를 0으로 변경하는 function(scrollToTopImmediate)을 추가하여 수동으로 이동.
 </details>

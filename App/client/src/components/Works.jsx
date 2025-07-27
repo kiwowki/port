@@ -18,7 +18,7 @@ const Works = () => {
                 scale: 1.5,
             });
 
-            const mediaQuery = window.matchMedia("(max-width: 1000px)");
+            const mediaQuery = window.matchMedia("(max-width: 479px)");
 
             if (mediaQuery.matches) {
                 ScrollTrigger.create({
@@ -29,7 +29,7 @@ const Works = () => {
                 });
             } else {
                 // 트리거 엘리먼트의 높이를 가상의 높이로 설정
-                const virtualHeight = window.innerHeight * 6; // 예를 들어 2배로 설정
+                const virtualHeight = window.innerHeight * 6; // 예를 들어 6배로 설정
 
                 ScrollTrigger.create({
                     animation: ani,

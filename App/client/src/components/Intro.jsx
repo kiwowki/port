@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,6 +8,22 @@ import { introImg } from "../constants";
 gsap.registerPlugin(ScrollTrigger);
 
 const Intro = () => {
+
+    const [flipped, setFlipped] = useState(
+        Array(introImg.length).fill(false)
+    );
+
+    // ② index를 받아 해당 카드만 토글
+    const flipCardHandler = (idx) => {
+        setFlipped((prev) => {
+            const next = [...prev];
+            next[idx] = !next[idx];
+            return next;
+        });
+        console.log("idx", idx)
+    };
+
+
     const titleT1Ref = useRef(null);
     const titleT2Ref = useRef([]);
 
@@ -47,8 +63,8 @@ const Intro = () => {
         }
     };
 
+    // intro 배경 3D
     useEffect(() => {
-        // intro 배경 3D
         const starsIntro = document.getElementById("stars_intro");
         const starsCtxIntro = starsIntro.getContext("2d");
 
@@ -162,20 +178,21 @@ const Intro = () => {
                 scale: 1,
                 stagger: 0.2,
             });
-            tl.to("#header", { duration: 1.2, y: 0, opacity:1 });
+            tl.to("#header", { duration: 1.2, y: 0, opacity: 1 });
         }, 2000);
 
-        const flipCard = (element) => {
-            const flipper = element.querySelector(".flipper");
-            flipper.style.transform =
-                flipper.style.transform === "rotateY(180deg)"
-                    ? "rotateY(0deg)"
-                    : "rotateY(180deg)";
-        };
+        // const flipCard = (element) => {
+        //     const flipper = element.querySelector(".flipper");
+        //     flipper.style.transform =
+        //         flipper.style.transform === "rotateY(180deg)"
+        //             ? "rotateY(0deg)"
+        //             : "rotateY(180deg)";
+        //     console.log(flipper.style.transform)
+        // };
 
-        document.querySelectorAll(".flip-container").forEach((element) => {
-            element.addEventListener("click", () => flipCard(element));
-        });
+        // document.querySelectorAll(".flip-container").forEach((element) => {
+        //     element.addEventListener("click", () => flipCard(element));
+        // });
     }, []);
 
     return (
@@ -198,8 +215,9 @@ const Intro = () => {
                                 <div
                                     className={`img${index + 1} flip-container`}
                                     key={index}
+                                    onClick={() => flipCardHandler(index)}      // ③ onClick 연결
                                 >
-                                    <div className="flipper">
+                                    <div className={`flipper${flipped[index] ? " flipped" : ""}`}>
                                         <div className="front">
                                             <img
                                                 src={text.src}
