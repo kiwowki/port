@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import axios from "axios";
+// import axios from "axios";
 import RepleContent from "./RepleContent";
 import RepleWrite from "./RepleWrite";
 import api from "../../api";
@@ -9,11 +9,16 @@ const RepleList = () => {
     const repleListRef = useRef(null);
 
     const fetchRepleList = useCallback(() => {
-        api.post("/reple/getReple").then((response) => {
-            if (response.data.success) {
-                setRepleList([...response.data.repleList]);
-            }
-        });
+        api.post("/reple/getReple")
+            .then(res => {
+                if (res.data.success) {
+                    setRepleList(res.data.repleList);
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                // 예: setError(true) 또는 알림 표시
+            });
     }, []);
 
     const onUpdateRepleList = useCallback(() => {
