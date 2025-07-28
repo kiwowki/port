@@ -1,5 +1,7 @@
 # MERN(MongoDB + Express + React + Node.js)를 이용한 포트폴리오 사이트 만들기
 
+%% 개발 환경시 setver/config/dev.js에 비밀번호 입력하여 작업 할 것(서버환경은 netlify에 등록해놓음) %%
+
 ##### React는 Facebook에서 개발한 JavaScript 라이브러리로, 사용자 인터페이스(UI)를 구축하는 데 사용되는 오픈 소스 라이브러리입니다.
 
 -   컴포넌트 기반 구조
