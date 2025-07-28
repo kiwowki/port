@@ -1,8 +1,13 @@
 const express = require("express");
+const cors = require("cors"); 
 const path = require("path");
 const mongoose = require("mongoose");
 
 const app = express();
+
+app.use(cors());                     // ← 모든 도메인 허용
+app.options("*", cors());           // ← 프리플라이트도 허용
+
 // 임시 수정
 const port = process.env.PORT || 8080;
 const config = require("./server/config/key.js");

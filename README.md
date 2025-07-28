@@ -100,7 +100,7 @@ React Native라는 동생 프로젝트를 통해 리액트를 사용하여 iOS �
     ### fly.io
 
 1.  fly.io 회원가입 및 카드 등록
-2.  로컬에 fly.io 설치하기(설치 후 한 번 껐다 켜기)
+2.  로컬에 fly.io 설치하기(설치 후 한 번 껐다 켜기) - App 내에서?
 
 ```bash
 iwr https://fly.io/install.ps1 -useb | iex
@@ -146,7 +146,7 @@ flyctl apps list
 NAME    OWNER   STATUS  PLATFORM        LATEST DEPLOY
 ```
 
-6.  `flyctl launch` 로 시작하기(high risk오류는 트러블슈팅 참고)
+6.  `flyctl launch` 로 시작하기(high risk오류는 트러블슈팅 참고) - App 내에서
   * 이미 docker나 fly.toml이 있다면 제거 후 진행할 것
   1.  Do you want to tweak these settings before proceeding? 에서 y를 누르면 홈페이지 창이 뜸.
   2.  region은 한국이 없다. 가장 가까운 도쿄로 선택.
@@ -155,6 +155,8 @@ NAME    OWNER   STATUS  PLATFORM        LATEST DEPLOY
    
 
 7.  `flyctl deploy` 로 배포하기(배포에 대한 에러는 하단의 트러블슈팅 참고)
+
+8. 이후 neflify 등 클라이언트 배포
 
 <details>
 <summary>Firebase 연동 순서</summary>****
