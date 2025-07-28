@@ -156,9 +156,9 @@ const Skills = () => {
                             <div className="mid">
                                 <div className="h3_bold">figma</div>
                                 <div className="h3_bold">api</div>
-                                <div className="h3_bold">redux</div>
+                                <div className="h3_bold">vue3</div>
                                 <div className="h3_bold">chrome design</div>
-                                <div className="h3_bold">tmdb</div>
+                                <div className="h3_bold">scss</div>
                                 <div className="h3_bold">workouts</div>
                                 <div className="h3_bold">game</div>
                             </div>

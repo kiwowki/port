@@ -312,7 +312,7 @@
           flex-direction: column;
           padding: 2vw 200px;
           position: relative;
-          border-radius: 0 0 5vw 5vw;
+          // border-radius: 0 0 5vw 5vw;
 
           p {
             font-family: var(--zeno);
@@ -386,6 +386,18 @@
               height: 16vw;
             }
           }
+        }
+      }
+
+      .p1 {
+        .about_photos_img {
+          // border-radius: 0 0 5vw 5vw;
+        }
+      }
+
+      .p3 {
+        .about_photos_img {
+          border-radius: 0 0 5vw 5vw;
         }
       }
     }

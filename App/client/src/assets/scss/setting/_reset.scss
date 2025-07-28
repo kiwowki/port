@@ -4,7 +4,7 @@ body {
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
     color: var(--black);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 html::-webkit-scrollbar,
@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
     }
 
     body {
-        overflow-y: hidden;
+        // overflow-y: hidden;
     }
 
     /* ── 웹킷 계열 세로스크롤바 스타일 ── */
