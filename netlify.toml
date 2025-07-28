@@ -1,0 +1,5 @@
+[build]
+  base      = "App/client"   # ← 여기서 빌드 시작
+  publish   = "build"        # App/client/build 폴더를 퍼블리시
+  command   = "npm run build"
+  functions = "netlify/functions"
