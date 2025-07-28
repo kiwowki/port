@@ -1,14 +1,36 @@
 // netlify/functions/api-reple.js
+const mongoose    = require("mongoose");
 const express     = require("express");
 const serverless  = require("serverless-http");
-const repleRouter = require("../../App/server/router/reple");
-const app         = express();
+const repleRouter = require("../../App/server/router/reple"); // 실제 경로 맞추기
+const { mongoURI } = require("../../App/server/key");   // production.js에서 process.env.MONGO_URI 읽음
 
-// Body 파싱
+// DB 연결을 싱글톤으로 관리
+let conn = null;
+async function connectDB() {
+  if (conn) return conn;
+  conn = await mongoose.connect(mongoURI, {
+    useNewUrlParser:    true,
+    useUnifiedTopology: true,
+  });
+  return conn;
+}
+
+const app = express();
 app.use(express.json());
 
-// /api/reple/* 경로로 라우터 연결
+// 모든 요청 전에 DB 연결 수행
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error("DB 연결 실패:", err);
+    return res.status(500).json({ success: false, message: "DB 연결 실패" });
+  }
+});
+
+// 라우터 연결
 app.use("/api/reple", repleRouter);
 
-// Lambda 핸들러 내보내기
 module.exports.handler = serverless(app);
