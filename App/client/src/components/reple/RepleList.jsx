@@ -2,13 +2,14 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import axios from "axios";
 import RepleContent from "./RepleContent";
 import RepleWrite from "./RepleWrite";
+import api from "../../api";
 
 const RepleList = () => {
     const [repleList, setRepleList] = useState([]);
     const repleListRef = useRef(null);
 
     const fetchRepleList = useCallback(() => {
-        axios.post("/api/reple/getReple").then((response) => {
+        api.post("/reple/getReple").then((response) => {
             if (response.data.success) {
                 setRepleList([...response.data.repleList]);
             }

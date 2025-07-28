@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 // 임시 수정
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 const config = require("./server/config/key.js");
 
 app.use(express.static(path.join(__dirname, "./client/build")));
@@ -16,8 +16,8 @@ app.use("/api/reple", require("./server/router/reple.js"));
 
 app.listen(port,'0.0.0.0', () => {
     mongoose
-        .connect(config.mongoURI)
-        // .connect()
+        // .connect(config.mongoURI)
+        .connect("mongodb+srv://wolves941110:rkdtjr00%21%21@cluster0.efj98qh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
         .then(() => {
             console.log("listening  --> " + port);
             console.log("mongoose --> connecting");

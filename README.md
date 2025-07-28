@@ -147,11 +147,12 @@ NAME    OWNER   STATUS  PLATFORM        LATEST DEPLOY
 ```
 
 6.  `flyctl launch` 로 시작하기(high risk오류는 트러블슈팅 참고)
-
-    1.  Do you want to tweak these settings before proceeding? 에서 y를 누르면 홈페이지 창이 뜸.
-    2.  region은 한국이 없다. 가장 가까운 도쿄로 선택.
-    3.  나머지는 그대로 두고 confirm 누르기.
-    4.  그러면 fly.toml 등 파일이 몇 가지 생긴다.(안 생긴다면 다시 flyctl launch 쳐보기)
+  * 이미 docker나 fly.toml이 있다면 제거 후 진행할 것
+  1.  Do you want to tweak these settings before proceeding? 에서 y를 누르면 홈페이지 창이 뜸.
+  2.  region은 한국이 없다. 가장 가까운 도쿄로 선택.
+  3.  나머지는 그대로 두고 confirm 누르기.
+  4.  그러면 fly.toml 등 파일이 몇 가지 생긴다.(안 생긴다면 다시 flyctl launch 쳐보기)
+   
 
 7.  `flyctl deploy` 로 배포하기(배포에 대한 에러는 하단의 트러블슈팅 참고)
 
@@ -276,8 +277,8 @@ input:-internal-autofill-selected {
 Your account has been marked as high risk. Please go to https://fly.io/high-risk-unlock to verify your account.
 ```
 
-해결방법 - 터미널에 나와있는 대로 `https://fly.io/high-risk-unlock`에서 계정을 unlock 해주면 됨. 카드를 선택하라고 나와있는데 언락만으로 결제가 되는 게 아니니 안심.
-
+해결방법 - 터미널에 나와있는 대로 `https://fly.io/high-risk-unlock`에서 계정을 unlock 해주면 됨. 카드를 선택하라고 나와있는데 언락만으로 결제가 되는 게 아니니 안심.(꼭 마지막까지 unlock되었는지 확인 후 진행)
+이후 다시 `flyctl launch` 진행
 
 -   failed to fetch an image or build from source 에러
 
