@@ -1,8 +1,5 @@
 # MERN(MongoDB + Express + React + Node.js)를 이용한 포트폴리오 사이트 만들기
 
-\*\* 임시로 쓰고 삭제할 것
-\_id: mongoose.Schema.Types.ObjectId
-
 ##### React는 Facebook에서 개발한 JavaScript 라이브러리로, 사용자 인터페이스(UI)를 구축하는 데 사용되는 오픈 소스 라이브러리입니다.
 
 -   컴포넌트 기반 구조

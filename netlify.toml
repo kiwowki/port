@@ -1,0 +1,4 @@
+[build]
+  base      = "App/client"
+  publish   = "App/client/build"
+  functions = "netlify/functions"
