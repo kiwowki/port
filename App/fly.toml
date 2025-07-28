@@ -7,11 +7,6 @@ app = 'seohyeon-port'
 primary_region = 'nrt'
 
 [build]
-# Dockerfile 대신 buildpack 사용
-  builder = "paketobuildpacks/builder:base"
-
-  [env]
-  PORT = "8080"
 
 [http_service]
   internal_port = 8080

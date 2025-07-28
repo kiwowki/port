@@ -9,16 +9,11 @@ const RepleList = () => {
     const repleListRef = useRef(null);
 
     const fetchRepleList = useCallback(() => {
-        api.post("/api/reple/getReple")
+        api.post("/api/reple/getReple", {})
             .then(res => {
-                if (res.data.success) {
-                    setRepleList(res.data.repleList);
-                }
+                if (res.data.success) setRepleList(res.data.repleList);
             })
-            .catch(err => {
-                console.error(err);
-                // 예: setError(true) 또는 알림 표시
-            });
+            .catch(err => console.error("댓글 조회 실패:", err));
     }, []);
 
     const onUpdateRepleList = useCallback(() => {
