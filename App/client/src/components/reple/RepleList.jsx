@@ -9,7 +9,7 @@ const RepleList = () => {
     const repleListRef = useRef(null);
 
     const fetchRepleList = useCallback(() => {
-        api.post("/reple/getReple")
+        api.post("/api/reple/getReple")
             .then(res => {
                 if (res.data.success) {
                     setRepleList(res.data.repleList);
